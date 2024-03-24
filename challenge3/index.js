@@ -9,8 +9,8 @@ function calcSalary() {
 
     let taxableIncome = (basicSalary - benefits);
 
-
-    console.log(taxableIncome);
+    
+    console.log("Taxable Income: ",taxableIncome);
 
     if (taxableIncome < 24000) {
 
@@ -45,7 +45,7 @@ function calcSalary() {
 
 
     }
-    console.log(tax);
+    console.log("tax",tax);
 
     if (taxableIncome <= 5999) {
         nhifDeduction = 150;
@@ -77,8 +77,17 @@ function calcSalary() {
     } else {
         nhifDeduction = 1000;
     }
-    
-console.log(nhifDeduction);
+
+console.log("NHIF",nhifDeduction);
+
+let nssfContribution = 1080;
+
+console.log("NSSF", nssfContribution)
+
+let netSalary = taxableIncome - (nssfContribution+nhifDeduction+tax);
+
+console.log("Net Salary",netSalary);
+
 }
 
 
