@@ -6,7 +6,7 @@ function calcSalary() {
     console.log(basicSalary);
     console.log(benefits);
 
-
+//Deduct the benefits since they are not taxable
     let taxableIncome = (basicSalary - benefits);
 
     
@@ -14,7 +14,7 @@ function calcSalary() {
 
     document.getElementById("taxIncome").innerHTML = taxableIncome;
 
-    
+    //Income below 24000 isnt subjectable to taxation
 
     if (taxableIncome < 24000) {
 
@@ -88,11 +88,15 @@ console.log("NHIF",nhifDeduction);
 
 document.getElementById("nhif").innerHTML = nhifDeduction;
 
+//Old rates tandard NSSF contributions is 1080
+
 let nssfContribution = 1080;
 
 console.log("NSSF", nssfContribution);
 
 document.getElementById("nssf").innerHTML = nssfContribution;
+
+//Net salary is calc by deducting all the above
 
 let netSalary = taxableIncome - (nssfContribution+nhifDeduction+tax);
 
