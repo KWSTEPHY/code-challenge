@@ -1,19 +1,38 @@
 function checkSpeed() {
 
-    let speedInput = document.querySelector("#speedInput").value;
+    let carSpeed = document.querySelector("#carSpeed").value;
 
-    var speed = parseFloat(document.getElementById("speedInput").value);
-    var resultElement = document.getElementById("result");
-    var speedLimit = 70;
-    var demeritPoints = 0;
 
-    if (speed <= speedLimit) {
-        resultElement.textContent = "Ok";
-    } else {
-        demeritPoints = Math.floor((speed - speedLimit) / 5);
-        resultElement.textContent = "Points: " + demeritPoints;
-        if (demeritPoints > 12) {
-            resultElement.textContent += " - License suspended";
-        }
+   
+
+    
+
+    console.log(carSpeed);
+
+
+
+    let result = "OK";
+
+  
+
+    if (carSpeed > 70) {
+
+        let demeritPoints = (carSpeed-70) / 5;
+        
+
+        console.log(demeritPoints);
+
+
+        result = "Demerit  "+ Math.floor(demeritPoints);
+
     }
+    else if (result) {
+
+    }
+    console.log(result);
+
+    document.getElementById("result").innerHTML = result;
+
+    
 }
+

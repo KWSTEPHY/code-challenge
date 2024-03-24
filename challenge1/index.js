@@ -1,6 +1,10 @@
+
 function showResult() {
 
     let studentMarks = document.querySelector("#studentMarks").value;
+
+    let gradeElement = document.getElementById("grade");
+    console.log(gradeElement);
 
     console.log(studentMarks);
 
@@ -32,10 +36,7 @@ function showResult() {
 console.log(grade);
 
 
-
-
-
-
+document.getElementById("grade").innerHTML = grade;
 
 
 
