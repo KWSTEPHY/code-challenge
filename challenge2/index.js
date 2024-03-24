@@ -25,10 +25,12 @@ function checkSpeed() {
 
         result = "Demerit  "+ Math.floor(demeritPoints);
 
+        if (demeritPoints > 11) {
+            result = "License Suspended";
     }
-    else if (result) {
 
     }
+    
     console.log(result);
 
     document.getElementById("result").innerHTML = result;
