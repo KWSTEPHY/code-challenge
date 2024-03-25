@@ -1,6 +1,7 @@
 
 function showResult() {
-
+    
+    //User to input student marks
     let studentMarks = document.querySelector("#studentMarks").value;
 
     let gradeElement = document.getElementById("grade");
@@ -8,6 +9,7 @@ function showResult() {
 
     console.log(studentMarks);
 
+    //Assign grades according to the marks scored
     if(studentMarks >= 79){
         
         grade = "A";
@@ -37,9 +39,6 @@ console.log(grade);
 
 
 document.getElementById("grade").innerHTML = grade;
-
-
-
 
 
 }
