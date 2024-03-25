@@ -17,7 +17,7 @@ function checkSpeed() {
 
         console.log(demeritPoints);
 
-
+        //Round off any (Demerit) float ;Round Down
         result = "Demerit  " + Math.floor(demeritPoints);
 
         if (demeritPoints > 11) {

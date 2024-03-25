@@ -1,0 +1,52 @@
+body{
+    display: grid;
+    place-content: center;
+    min: height 100px;
+    padding: 120px;
+}
+
+.container{
+    background-color: aliceblue;
+    width: 800px;
+    height: 400px;
+    box-shadow:  10px 10px  black;
+    border-radius: 10px;
+}
+.bottom-box{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    background-color:lightskyblue ;
+}
+.content .top-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 75vw;
+    min-height: 50vh;
+
+}
+.top-box input{
+    margin:10px;
+    width:280px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 30px;
+    font-size: small;
+}
+.top-box button{
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: rgb(17, 10, 0);
+    border: 0;
+    outline: none;
+    font-size: small ;
+    border-radius: 30px;
+
+}
