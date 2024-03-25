@@ -14,44 +14,40 @@ function calcSalary() {
 
     document.getElementById("taxIncome").innerHTML = taxableIncome;
 
-    //Income below 24000 isnt subjectable to taxation
 
-    if (taxableIncome < 24000) {
+    // Determines tax based on income brackets
+    if (taxableIncome <= 24000) {
+        tax = 0.1 * taxableIncome;
 
-        tax = "0%";
+    }else if (taxableIncome <= 32333) {
+        tax = 2400 + 0.25 * (taxableIncome - 24000);
+
+    }else if (taxableIncome <= 40667) {
+        tax = 5967.50 + 0.3 * (taxableIncome - 32333);
+
+    } else if (taxableIncome <= 49000) {
+        tax = 10960 + 0.32 * (taxableIncome - 40667);
+
+    } else if (taxableIncome <= 57333) {
+        tax = 16862.50 + 0.34 * (taxableIncome - 49000);
+        
+    } else if (taxableIncome <= 65667) {
+        tax = 23575 + 0.36 * (taxableIncome - 57333);
+
+    } else if (taxableIncome <= 74000) {
+        tax = 31142 + 0.37 * (taxableIncome - 65667);
+
     } else {
-
-        if (taxableIncome >= 120000) {
-
-            tax = (taxableIncome*0.3);
-
-        }
-        else if (taxableIncome >= 80000) {
-
-            tax = (taxableIncome*0.25);
-
-        }
-        else if (taxableIncome >= 40000) {
-
-            tax = (taxableIncome*0.2);
-
-        }
-        else if (taxableIncome >= 24000) {
-
-            tax = (taxableIncome*0.15);
-
-        }
-        else {
-
-            tax = (taxableIncome*0.1);
-        }
-
-
-
+        tax = 39675 + 0.4 * (taxableIncome - 74000);
     }
+    return tax;
+}
+ 
     console.log("tax",tax);
 
     document.getElementById("tax").innerHTML = tax;
+
+    //Determine nhifdeductions based on taxableincome bracket
 
     if (taxableIncome <= 5999) {
         nhifDeduction = 150;
@@ -88,6 +84,7 @@ console.log("NHIF",nhifDeduction);
 
 document.getElementById("nhif").innerHTML = nhifDeduction;
 
+
 //Old rates tandard NSSF contributions is 1080
 
 let nssfContribution = 1080;
@@ -95,6 +92,7 @@ let nssfContribution = 1080;
 console.log("NSSF", nssfContribution);
 
 document.getElementById("nssf").innerHTML = nssfContribution;
+
 
 //Net salary is calc by deducting all the above
 
@@ -105,6 +103,4 @@ console.log("Net Salary",netSalary);
 document.getElementById("netSalary").innerHTML = netSalary;
 
 }
-
-
 
