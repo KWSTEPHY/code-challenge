@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Net Salary Calculator </title>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css">
+
 <body>
 
     <div class="container">
         <div class="bottom-box">
             <div class="tx">
-                
+
                 <h2>Tax Income <span id="taxIncome"></span></h2>
 
                 <h2>Tax <span id="tax"></span></h2>
@@ -24,17 +26,17 @@
             </div>
         </div>
 
-<div class="content">
-    <div class="top-box">
-    <h2>Net Salary Calc</h2>
-    <input type="number" id="basicSalary" placeholder="Enter basic salary">
-    <input type="number" id="benefits" placeholder="Enter benefits">
-    <button type="button" onclick="calcSalary()">PRINT</button> 
-   
-</div>
+        <div class="content">
+            <div class="top-box">
+                <h2>Net Salary Calc</h2>
+                <input type="number"  min="0"id="basicSalary" placeholder="Enter basic salary">
+                <input type="number" min="0" id="benefits" placeholder="Enter benefits">
+                <button type="button" onclick="calcSalary()">PRINT</button>
+
+            </div>
 
 
-    <script src="index.js"></script>
+            <script src="index.js"></script>
 </body>
-</html>
 
+</html>

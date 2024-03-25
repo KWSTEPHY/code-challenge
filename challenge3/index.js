@@ -15,31 +15,25 @@ function calcSalary() {
     document.getElementById("taxIncome").innerHTML = taxableIncome;
 
 
-    // Determines tax based on income brackets
-    if (taxableIncome <= 24000) {
-        tax = 0.1 * taxableIncome;
 
-    }else if (taxableIncome <= 32333) {
-        tax = 2400 + 0.25 * (taxableIncome - 24000);
 
-    }else if (taxableIncome <= 40667) {
-        tax = 5967.50 + 0.3 * (taxableIncome - 32333);
+// Calculate Tax based on the tax bracket
+if(taxableIncome <= 24000) {
+    tax = Math.floor(taxableIncome * 0.1);
+}
+else if(taxableIncome > 24000 && taxableIncome <= 32333) {
+    tax = Math.floor(taxableIncome * 0.25);
+}
+else if(taxableIncome > 32333 && taxableIncome <= 500000) {
+    tax = Math.floor(taxableIncome * 0.3);
+}
+else if(taxableIncome > 500000 && taxableIncome <= 800000) {
+    tax = Math.floor(taxableIncome * 0.325);
+}
+else {
+    tax = Math.floor(taxableIncome * 0.35);
 
-    } else if (taxableIncome <= 49000) {
-        tax = 10960 + 0.32 * (taxableIncome - 40667);
-
-    } else if (taxableIncome <= 57333) {
-        tax = 16862.50 + 0.34 * (taxableIncome - 49000);
-        
-    } else if (taxableIncome <= 65667) {
-        tax = 23575 + 0.36 * (taxableIncome - 57333);
-
-    } else if (taxableIncome <= 74000) {
-        tax = 31142 + 0.37 * (taxableIncome - 65667);
-
-    } else {
-        tax = 39675 + 0.4 * (taxableIncome - 74000);
-    }
+    
     return tax;
 }
  
@@ -80,12 +74,13 @@ function calcSalary() {
         nhifDeduction = 1000;
     }
 
+
 console.log("NHIF",nhifDeduction);
 
 document.getElementById("nhif").innerHTML = nhifDeduction;
 
 
-//Old rates tandard NSSF contributions is 1080
+//Old rates standard NSSF contributions is 1080
 
 let nssfContribution = 1080;
 
