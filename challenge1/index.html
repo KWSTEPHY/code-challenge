@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
-    <!--  -->
+    <!-- Create a container to encompass Results and Grade -->
     <div class="container">
         <div class="bottom-box">
             <h1>Result</h1>
@@ -22,8 +22,10 @@
         <div class="content">
             <div class="top-box">
 
+                <!-- Create another container to hold th input which is student marks and ensure the max marks a user can input is 100 and min is 0 -->
                 <input type="number" min="0" max="100" id="studentMarks" placeholder="Input student marks" />
 
+                <!-- Create a button that when clicked shows the results -->
                 <button type="button" onclick="showResult()">PRINT</button>
 
             </div>

@@ -1,4 +1,4 @@
-
+//Create a function that shows the results a student gets once their marks is inputed
 function showResult() {
     
     //User to input student marks
